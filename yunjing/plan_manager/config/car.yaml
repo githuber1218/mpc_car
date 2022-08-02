@@ -1,0 +1,31 @@
+# 物理参数
+# max_vel:                        5.9
+# max_acc:                        6.0
+# max_cur:                        3.50877
+max_vel:                        0.6
+max_acc:                        0.5
+max_cur:                        20
+astar_cur:                      5
+max_omega:                      0.5
+max_domega:                     1
+
+# 轮距 Tread
+tread:                          0.3
+# 前悬
+front_suspension:               0.05
+# 后悬
+rear_suspension:                0.05
+# 轴距
+wheel_base:                     0.3
+# 主体高
+base_height:                    0.2
+# 车体尺寸
+length:                         0.4
+width:                          0.4
+height:                         0.2
+
+# 检查碰撞 采样间隔
+Collision_interval:             0.025
+
+# 最后认为到达目标的阈值距离
+dis_thre:                       0.01

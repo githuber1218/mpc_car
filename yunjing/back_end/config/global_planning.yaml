@@ -1,0 +1,31 @@
+TimeWeight:                 500
+
+smoothingFactor:            0.001
+
+# integralResolution:         12
+
+# v_max   a_max  cur_max  omega_max
+# magnitudeBounds:            [4 , 4, 4, 0.5, 4]
+
+# v_weight  a_weight  cur_weight  omega_weight  colli_weight  domega_weight
+# penaltyWeights:             [10000, 10000, 10000, 10000, 10000]
+# 一个好像比较稳定的版本
+# penaltyWeights:             [1000, 1000 , 0 , 10000, 1000000, 10]
+penaltyWeights:             [1000, 1000 , 0 , 10000, 10000000, 1000000]
+
+# 速度慢的时候密集采样
+# denseResolution:            20
+# 当第一节为特别优化一下的时候
+denseResolution:            2
+
+# 速度快的时候稀疏采样
+sparseResolution:           2
+
+# 后端采样时间
+timeResolution:             0.4
+
+# 安全距离
+safeDis:                    0.1
+
+# 走廊的搜索范围
+range:                      1

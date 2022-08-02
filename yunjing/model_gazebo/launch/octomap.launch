@@ -1,0 +1,27 @@
+<launch>
+
+
+  <arg name="world_file" default="$(find model_gazebo)/world/simple_convex_world.world"/>
+  <arg name="if_gazebo" default="false"/>
+
+  <group if="$(arg if_gazebo)">
+    <include file = "$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="world_name" value="$(arg world_file)"/>  
+    </include>
+    <node name="spawn_model" pkg="gazebo_ros"    type="spawn_model"
+      args="-file $(find model_gazebo)/urdf/unit_box_small/model.sdf -sdf -x -8 -y -7 -z 0 -model tracked_robot_control"
+      output="screen" />
+  </group>
+
+  <node name="octomap" pkg="model_gazebo" type="world2oct" output="screen">
+    <!-- <rosparam file="$(find model_gazebo)/config/model_config.yaml" command="load"/> -->
+    <param name="interval" value="0.05"/>
+    <param name="gridmap_interval" value="0.1"/>
+    <param name="file_name" value="$(arg world_file)"/>
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find model_gazebo)/rviz/octomap.rviz" />
+
+  
+  
+</launch>

@@ -1,0 +1,62 @@
+# yaw采样间隔
+yaw_resolution :                  0.3
+
+# 前向搜索位移
+step_arc:                         0.2
+
+# 差分搜索轮位移 建议小于pi/4/(3(差速比，即两轮速度比为2:-1)/tread)=0.07854
+step_diff:                        0.07
+
+# 贪婪搜索的系数，乘在h前面
+lambda_heu :                      5.0
+
+# 最大搜索时间
+max_seach_time:                   10
+
+# 前后向前进惩罚系数
+traj_forward_penalty:             1.0
+traj_back_penalty:                3
+
+# 前进倒车状态切换惩罚
+traj_gear_switch_penalty:         5
+
+# 转角惩罚
+traj_steer_penalty:               0
+
+# 转角改变惩罚
+traj_steer_change_penalty:        0
+
+# 不准冲着障碍物去的惩罚
+traj_toword_occ_penalty:          100
+
+# 上面这个惩罚的搜索范围
+traj_toword_occ_scope:            1
+
+# oneshot检查中间点碰撞离散间隔
+checkl:                           0.05
+
+# 用于A*拓展状态时检查碰撞
+check_num_:                       5
+
+# 一个固定的高度，用于检查碰撞
+stable_z:                         0.01
+
+# 小于该速度时认为是静止状态
+non_siguav:                       0.01
+
+# oneshot范围
+oneshot_range:                    0.5
+
+# 前端给出的最大距离
+max_kinoastar_dis:                120
+
+# 给到后端时的采样时间
+sampletime:                       0.1
+
+# 检查碰撞 采样间隔  建议是grid_interval的一半
+Collision_interval:               0.025
+
+
+
+# 不从yaml定义的：horizon_  allocate_num_
+# 不知道有什么用的：check_num_

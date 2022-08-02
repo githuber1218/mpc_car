@@ -1,0 +1,2 @@
+set(tracer_msgs_MESSAGE_FILES "/home/wang/xiaoche/yunjing/src/tracer_ros/tracer_msgs/msg/TracerMotorState.msg;/home/wang/xiaoche/yunjing/src/tracer_ros/tracer_msgs/msg/UartTracerMotorState.msg;/home/wang/xiaoche/yunjing/src/tracer_ros/tracer_msgs/msg/TracerLightState.msg;/home/wang/xiaoche/yunjing/src/tracer_ros/tracer_msgs/msg/TracerLightCmd.msg;/home/wang/xiaoche/yunjing/src/tracer_ros/tracer_msgs/msg/TracerStatus.msg;/home/wang/xiaoche/yunjing/src/tracer_ros/tracer_msgs/msg/UartTracerStatus.msg")
+set(tracer_msgs_SERVICE_FILES "")

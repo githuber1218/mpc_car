@@ -1,0 +1,8 @@
+prefix=/home/wang/xiaoche/yunjing/devel
+
+Name: ekf
+Description: Description of ekf
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

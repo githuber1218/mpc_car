@@ -1,0 +1,8 @@
+prefix=/home/wang/xiaoche/yunjing/devel
+
+Name: tracer_msgs
+Description: Description of tracer_msgs
+Version: 0.3.3
+Cflags: -I/home/wang/xiaoche/yunjing/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

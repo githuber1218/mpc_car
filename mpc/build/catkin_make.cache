@@ -1,0 +1,2 @@
+mpc_tracker
+-DCATKIN_DEVEL_PREFIX=/home/wang/xiaoche/mpc/devel -DCMAKE_INSTALL_PREFIX=/home/wang/xiaoche/mpc/install -G Unix Makefiles
