@@ -22,7 +22,7 @@
 class mpc
 {
   private:
-    int Nx = 3;
+    int Nx = 4;
     int Nu = 2;
     int Np = 20;
     int Nc = 10;
@@ -44,10 +44,10 @@ class mpc
     mpc(std::string name = "mpc_controller"){
       U.resize(2);
       U << 0, 0;
-      state_min.resize(3);
-      state_max.resize(3);
-      state_min << -1000,-1000,-1000;
-      state_max << 1000,1000,1000;
+      state_min.resize(4);
+      state_max.resize(4);
+      state_min << -1000,-1000,-1000,-1000;
+      state_max << 1000,1000,1000,1000;
       u_min.resize(2);
       u_max.resize(2);
       u_min << -1000 , -1000;
@@ -68,7 +68,7 @@ class mpc
     
     // set coefficient matrix Q and R. 
     // set dt,Nx,Nu,Np,Nc,row
-    void SetConfig(Eigen::MatrixXd q, Eigen::MatrixXd r,double T = 0.02, int Nx0 = 3,int Nu0 = 2,int Np0 = 20,int Nc0 = 10,int row0 = 10)
+    void SetConfig(Eigen::MatrixXd q, Eigen::MatrixXd r,double T = 0.02, int Nx0 = 4,int Nu0 = 2,int Np0 = 20,int Nc0 = 10,int row0 = 10)
     {
       Nx = Nx0;
       Nu = Nu0;
@@ -251,8 +251,8 @@ class mpc
       idx = calc_target_index(state_now, refstate, number);
       /////not reach the end point/////
       if(idx!=number-1){
-        Eigen::Matrix3d a;
-        Eigen::Matrix<double, 3, 2> b;
+        Eigen::Matrix4d a;
+        Eigen::Matrix<double, 4, 2> b;
         //refstate 
         double refv = refinput[idx][0];
         double refw = refinput[idx][1];
@@ -266,15 +266,25 @@ class mpc
         // std::cout << "refy:" << std::endl << refy << std::endl;
         // std::cout << "reftheta:" << std::endl << reftheta << std::endl;
 
+        double a_4_1 = 2*sin(reftheta)*(sin(reftheta)*refv*cos(state_now[2]) - sin(state_now[2])*refv*cos(reftheta));
+        double a_4_2 = -2*cos(reftheta)*(sin(reftheta)*refv*cos(state_now[2]) - sin(state_now[2])*refv*cos(reftheta));
+        double a_4_3 = 2*(sin(reftheta)*state_now[0] - cos(reftheta)*state_now[1] + cos(reftheta)*refy - refx*sin(reftheta))*(-sin(reftheta)*refv*sin(state_now[2]) - cos(reftheta)*refv*cos(state_now[2]));
+        double b_4_1 = 2*(sin(reftheta)*state_now[0] - cos(reftheta)*state_now[1] + cos(reftheta)*refy - refx*sin(reftheta))*( sin(reftheta)*cos(state_now[2]) - cos(reftheta)*sin(state_now[2]));
         ////kinematics model////
-        a << 0,0,-refv * sin(reftheta), 0, 0, refv * cos(reftheta), 0, 0, 0;
-        b << cos(reftheta), 0, sin(reftheta), 0, 0, 1;
+        a << 0,0,-refv * sin(reftheta), 0, 
+        0, 0, refv * cos(reftheta), 0, 
+        0, 0, 0, 0, 
+        a_4_1, 
+        a_4_2, 
+        a_4_3, 
+        0;
+        b << cos(reftheta), 0, sin(reftheta), 0, 0, 1, b_4_1, 0;
 
         // std::cout << "a0:" << std::endl << a << std::endl;
         // std::cout << "b0:" << std::endl << b << std::endl;
 
         ////discretization////
-        a = a*dt + Eigen::MatrixXd::Identity(3,3);
+        a = a*dt + Eigen::MatrixXd::Identity(4,4);
         b = b*dt;
 
         // std::cout << "a:" << std::endl << a << std::endl;
@@ -391,10 +401,10 @@ class mpc
         lb2 << Umin-Ut;
         lb3 << delta_Umin;
         lb << lb1, lb2, lb3, 0;
-        std::cout << "lb1:" << std::endl << lb1 << std::endl;
-        std::cout << "lb2:" << std::endl << lb2 << std::endl;
-        std::cout << "lb3:" << std::endl << lb3 << std::endl;
-        std::cout << "lb:" << std::endl << lb << std::endl;
+        // std::cout << "lb1:" << std::endl << lb1 << std::endl;
+        // std::cout << "lb2:" << std::endl << lb2 << std::endl;
+        // std::cout << "lb3:" << std::endl << lb3 << std::endl;
+        // std::cout << "lb:" << std::endl << lb << std::endl;
         // std::cout << "lb0:" << std::endl << lb0 << std::endl;
         // // lb1 << A_I*delta_Umin;
         // std::cout << "lb1:" << std::endl << lb1 << std::endl;
@@ -407,10 +417,10 @@ class mpc
         // std::cout << "ub0:" << std::endl << ub0 << std::endl;
         ub3 << delta_Umax;
         ub << ub1, ub2, ub3, 1;
-        std::cout << "ub1:" << std::endl << ub1 << std::endl;
-        std::cout << "ub2:" << std::endl << ub2 << std::endl;
-        std::cout << "ub3:" << std::endl << ub3 << std::endl;
-        std::cout << "ub:" << std::endl << ub << std::endl;
+        // std::cout << "ub1:" << std::endl << ub1 << std::endl;
+        // std::cout << "ub2:" << std::endl << ub2 << std::endl;
+        // std::cout << "ub3:" << std::endl << ub3 << std::endl;
+        // std::cout << "ub:" << std::endl << ub << std::endl;
         // std::cout << "ub1:" << std::endl << ub1 << std::endl;
         // ub_ = Vector_intersection(ub0,ub1,1);
         // std::cout << "ub_:" << std::endl << ub_ << std::endl;

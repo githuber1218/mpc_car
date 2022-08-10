@@ -6,6 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /Path1
+        - /Path2
+        - /Path3
         - /Odometry1
         - /Odometry1/Shape1
       Splitter Ratio: 0.5
@@ -75,7 +78,7 @@ Visualization Manager:
       Radius: 0.029999999329447746
       Shaft Diameter: 0.009999999776482582
       Shaft Length: 0.019999999552965164
-      Topic: /mpc_controller/mpc_controller/mpc_ref_traj
+      Topic: /mpc_tracker/mpc_controller/mpc_ref_traj
       Unreliable: false
       Value: true
     - Alpha: 1
@@ -99,7 +102,7 @@ Visualization Manager:
       Radius: 0.029999999329447746
       Shaft Diameter: 0.009999999776482582
       Shaft Length: 0.019999999552965164
-      Topic: /mpc_controller/mpc_controller/mpc_pre_traj
+      Topic: /mpc_tracker/mpc_controller/mpc_pre_traj
       Unreliable: false
       Value: true
     - Alpha: 1
@@ -199,7 +202,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 11.910943031311035
+      Distance: 7.071588516235352
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -207,9 +210,9 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.2781852185726166
-        Y: 0.21814030408859253
-        Z: -1.9368443489074707
+        X: 17.353763580322266
+        Y: 0.09189417958259583
+        Z: -1.9368125200271606
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false

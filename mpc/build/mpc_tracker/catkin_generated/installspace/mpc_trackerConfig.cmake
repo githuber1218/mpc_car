@@ -67,14 +67,14 @@ set(mpc_tracker_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(mpc_tracker_SOURCE_PREFIX /home/wang/xiaoche/mpc/src/mpc_tracker)
-  set(mpc_tracker_DEVEL_PREFIX /home/wang/xiaoche/mpc/devel)
+  set(mpc_tracker_SOURCE_PREFIX /home/wolfgang/mpc_car/mpc/src/mpc_tracker)
+  set(mpc_tracker_DEVEL_PREFIX /home/wolfgang/mpc_car/mpc/devel)
   set(mpc_tracker_INSTALL_PREFIX "")
   set(mpc_tracker_PREFIX ${mpc_tracker_DEVEL_PREFIX})
 else()
   set(mpc_tracker_SOURCE_PREFIX "")
   set(mpc_tracker_DEVEL_PREFIX "")
-  set(mpc_tracker_INSTALL_PREFIX /home/wang/xiaoche/mpc/install)
+  set(mpc_tracker_INSTALL_PREFIX /home/wolfgang/mpc_car/mpc/install)
   set(mpc_tracker_PREFIX ${mpc_tracker_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/wang/xiaoche/mpc/install/lib;/home/wang/xiaoche/mpc/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/wolfgang/mpc_car/mpc/install/lib;/home/wolfgang/mpc_car/mpc/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

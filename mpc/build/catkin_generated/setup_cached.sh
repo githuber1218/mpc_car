@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/wang/xiaoche/mpc/build'
+export PWD='/home/wolfgang/mpc_car/mpc/build'

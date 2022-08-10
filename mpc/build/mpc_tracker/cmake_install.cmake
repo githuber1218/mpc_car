@@ -1,8 +1,8 @@
-# Install script for directory: /home/wang/xiaoche/mpc/src/mpc_tracker
+# Install script for directory: /home/wolfgang/mpc_car/mpc/src/mpc_tracker
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/wang/xiaoche/mpc/install")
+  set(CMAKE_INSTALL_PREFIX "/home/wolfgang/mpc_car/mpc/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/wang/xiaoche/mpc/build/mpc_tracker/catkin_generated/installspace/mpc_tracker.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/wolfgang/mpc_car/mpc/build/mpc_tracker/catkin_generated/installspace/mpc_tracker.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mpc_tracker/cmake" TYPE FILE FILES
-    "/home/wang/xiaoche/mpc/build/mpc_tracker/catkin_generated/installspace/mpc_trackerConfig.cmake"
-    "/home/wang/xiaoche/mpc/build/mpc_tracker/catkin_generated/installspace/mpc_trackerConfig-version.cmake"
+    "/home/wolfgang/mpc_car/mpc/build/mpc_tracker/catkin_generated/installspace/mpc_trackerConfig.cmake"
+    "/home/wolfgang/mpc_car/mpc/build/mpc_tracker/catkin_generated/installspace/mpc_trackerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mpc_tracker" TYPE FILE FILES "/home/wang/xiaoche/mpc/src/mpc_tracker/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mpc_tracker" TYPE FILE FILES "/home/wolfgang/mpc_car/mpc/src/mpc_tracker/package.xml")
 endif()
 

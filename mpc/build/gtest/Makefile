@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wang/xiaoche/mpc/src
+CMAKE_SOURCE_DIR = /home/wolfgang/mpc_car/mpc/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wang/xiaoche/mpc/build
+CMAKE_BINARY_DIR = /home/wolfgang/mpc_car/mpc/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/wang/xiaoche/mpc/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wang/xiaoche/mpc/build/CMakeFiles /home/wang/xiaoche/mpc/build/gtest/CMakeFiles/progress.marks
-	cd /home/wang/xiaoche/mpc/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wang/xiaoche/mpc/build/CMakeFiles 0
+	cd /home/wolfgang/mpc_car/mpc/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wolfgang/mpc_car/mpc/build/CMakeFiles /home/wolfgang/mpc_car/mpc/build/gtest/CMakeFiles/progress.marks
+	cd /home/wolfgang/mpc_car/mpc/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wolfgang/mpc_car/mpc/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wang/xiaoche/mpc/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/clean
+	cd /home/wolfgang/mpc_car/mpc/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,17 +154,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wang/xiaoche/mpc/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
+	cd /home/wolfgang/mpc_car/mpc/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wang/xiaoche/mpc/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
+	cd /home/wolfgang/mpc_car/mpc/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wang/xiaoche/mpc/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/wolfgang/mpc_car/mpc/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -191,6 +191,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wang/xiaoche/mpc/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/wolfgang/mpc_car/mpc/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

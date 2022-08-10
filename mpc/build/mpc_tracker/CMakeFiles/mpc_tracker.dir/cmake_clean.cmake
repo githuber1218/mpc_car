@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/wang/xiaoche/mpc/devel/lib/mpc_tracker/mpc_tracker"
-  "/home/wang/xiaoche/mpc/devel/lib/mpc_tracker/mpc_tracker.pdb"
+  "/home/wolfgang/mpc_car/mpc/devel/lib/mpc_tracker/mpc_tracker"
+  "/home/wolfgang/mpc_car/mpc/devel/lib/mpc_tracker/mpc_tracker.pdb"
   "CMakeFiles/mpc_tracker.dir/src/mpc_controller_sim.cpp.o"
 )
 

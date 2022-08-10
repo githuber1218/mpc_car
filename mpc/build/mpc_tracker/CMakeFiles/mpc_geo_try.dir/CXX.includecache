@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/wang/xiaoche/mpc/src/mpc_tracker/src/geo_try.cpp
+/home/wolfgang/mpc_car/mpc/src/mpc_tracker/src/geo_try.cpp
 iostream
 -
 ros/ros.h
-/home/wang/xiaoche/mpc/src/mpc_tracker/src/ros/ros.h
+/home/wolfgang/mpc_car/mpc/src/mpc_tracker/src/ros/ros.h
 nav_msgs/Odometry.h
-/home/wang/xiaoche/mpc/src/mpc_tracker/src/nav_msgs/Odometry.h
+/home/wolfgang/mpc_car/mpc/src/mpc_tracker/src/nav_msgs/Odometry.h
 geometry_msgs/Twist.h
-/home/wang/xiaoche/mpc/src/mpc_tracker/src/geometry_msgs/Twist.h
+/home/wolfgang/mpc_car/mpc/src/mpc_tracker/src/geometry_msgs/Twist.h
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string

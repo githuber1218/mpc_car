@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"mpc_tracker\"
 
-CXX_INCLUDES = -I/home/wang/xiaoche/mpc/src/mpc_tracker/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -I/usr/local/include/osqp -I/usr/local/include/osqp-eigen 
+CXX_INCLUDES = -I/home/wolfgang/mpc_car/mpc/src/mpc_tracker/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -I/usr/local/include/osqp -I/usr/local/include/osqp-eigen 
 
