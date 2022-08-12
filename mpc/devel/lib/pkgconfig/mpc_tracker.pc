@@ -1,4 +1,4 @@
-prefix=/home/wang/xiaoche/mpc/devel
+prefix=/home/wolfgang/mpc_car/mpc/devel
 
 Name: mpc_tracker
 Description: Description of mpc_tracker

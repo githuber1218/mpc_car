@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/wang/xiaoche/mpc/devel/lib/mpc_tracker/mpc_geo_try"
-  "/home/wang/xiaoche/mpc/devel/lib/mpc_tracker/mpc_geo_try.pdb"
+  "/home/wolfgang/mpc_car/mpc/devel/lib/mpc_tracker/mpc_geo_try"
+  "/home/wolfgang/mpc_car/mpc/devel/lib/mpc_tracker/mpc_geo_try.pdb"
   "CMakeFiles/mpc_geo_try.dir/src/geo_try.cpp.o"
 )
 
